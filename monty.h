@@ -5,9 +5,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
+
 #define INSTRUCTIONS_COUNT 17
 #define STACK 1
 #define QUEUE 0
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -33,7 +35,6 @@ typedef struct stack_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
-
 typedef struct instruction_s
 {
 	char *opcode;

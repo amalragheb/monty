@@ -10,23 +10,23 @@ data_t data = {0, NULL, NULL, NULL, NULL, NULL, STACK};
 int main(int argc, char **argv)
 {
 	FILE *file;
-    char *file_name = argv[1];
+	char *file_name = argv[1];
 	char *line = NULL;
 	size_t len = 0;
 	ssize_t read;
-	
+
 	if (argc != 2)
 	{
-        fprintf(stderr, "USAGE: monty file\n");
-	    exit(EXIT_FAILURE);
-    }
-	
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+
 	file = fopen(file_name, "r");
 	if (file == NULL)
 	{
-        fprintf(stderr, "Error: Can't open file %s\n", file_name);
-	    exit(EXIT_FAILURE);
-    }
+		fprintf(stderr, "Error: Can't open file %s\n", file_name);
+		exit(EXIT_FAILURE);
+	}
 	data.file = file;
 	while ((read = getline(&line, &len, file)) != -1)
 	{
